@@ -1,0 +1,56 @@
+:root {
+  --primary: #4675a3;
+  --secondary: #8e3c4c;
+  --background: #fff9f4;
+}
+
+.plaster-regular {
+  font-family: 'Plaster', system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.niconne-regular {
+  font-family: 'Niconne', cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* <uniquifier>: Use a unique and descriptive class name */
+/* <weight>: Use a value from 100 to 900 */
+
+.roboto-slab-my-roboto {
+  font-family: 'Roboto Slab', serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*  <uniquifier>: Use a unique and descriptive class name */
+/*  <weight>: Use a value from 100 to 900 */
+
+.montserrat-my-montserrat {
+  font-family: 'Montserrat', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: #4675a3;
+}
+
+section.cover,
+section#opening,
+section#data-pengantin,
+section#date-and-time,
+section#galery,
+section#wedding-gift,
+section#turut-mengundang,
+section#penutup {
+  background-image: url('../img/bg/Background-Daun.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+}

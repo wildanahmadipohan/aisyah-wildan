@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#4675A3',
+              secondary: '#8E3C4C',
+              accent: '#4D90D2',
+              background: '#FFF9F4',
+            },
+            boxShadow: {
+              '3xl': '0 8px 20px 0 rgba(0, 0, 0, 0.3)',
+            },
+          },
+        },
+      };
+    </script>
+
+    <title>Aisyah dan Wildan</title>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Niconne&family=Plaster&family=Roboto+Slab:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body class="bg-background">
+    <img
+      src="./assets/img/Flower-Atas-Kiri.png"
+      alt=""
+      class="absolute top-0 left-0 scale-90 origin-top-left"
+      data-aos="fade-right"
+      data-aos-duration="1000"
+    />
+    <img
+      src="./assets/img/Flower-Atas-Kanan.png"
+      alt=""
+      class="absolute top-0 right-0 scale-90 origin-top-right"
+      data-aos="fade-left"
+      data-aos-duration="1000"
+    />
+    <img
+      src="./assets/img/Flower-Bawah-Kiri.png"
+      alt=""
+      class="absolute bottom-0 left-0 scale-90 origin-bottom-left"
+      data-aos="fade-right"
+      data-aos-duration="1000"
+    />
+
+    <main class="min-h-screen flex justify-center items-center text-center">
+      <div class="background">
+        <div class="img-1"></div>
+        <div class="img-2"></div>
+        <div class="img-3"></div>
+      </div>
+      <section class="cover space-y-6">
+        <h1
+          class="plaster-regular text-primary text-8xl pb-4 animate-bounce"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+        >
+          AW
+        </h1>
+        <p class="font-medium" data-aos="fade-down" data-aos-duration="1000">The Wedding Of</p>
+        <h1 class="niconne-regular text-secondary text-5xl pb-4 animate-pulse">Aisyah & Wildan</h1>
+        <p>Kepada Bapak/Ibu/Saudara/i</p>
+        <h4
+          class="text-secondary font-semibold pb-1"
+          id="to"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          Fulanah dan Partner
+        </h4>
+        <p class="pb-5" data-aos="fade-up" data-aos-duration="1300">
+          Tanpa Mengurangi Rasa Hormat, Kami Mengundang Bapak/Ibu/Saudara/i Untuk Hadir Di Acara
+          Pernikahan Kami.
+        </p>
+        <div class="cta">
+          <a
+            href="./undangan.html"
+            type="button"
+            class="bg-gradient-to-r from-primary to-accent px-8 py-4 text-white border-0 rounded-full font-semibold shadow-3xl shadow-primary"
+          >
+            Buka Undangan
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      const to = urlParams.get('to');
+
+      if (urlParams.has('to')) {
+        const toBox = document.getElementById('to');
+        toBox.innerText = to;
+      }
+    </script>
+  </body>
+</html>

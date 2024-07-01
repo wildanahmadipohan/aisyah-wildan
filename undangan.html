@@ -39,9 +39,43 @@
     <link rel="stylesheet" href="./assets/countdown/simplyCountdown.theme.default.css" />
     <script src="./assets/countdown/simplyCountdown.min.js"></script>
 
+    <!-- remix icon -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body class="bg-background">
+    <!-- navigation menu -->
+    <div class="container flex justify-center relative">
+      <nav class="rounded-xl shadow-3xl z-10">
+        <ul class="flex justify-center items-center">
+          <li class="active">
+            <a href="#opening" class="text-white text-3xl"><i class="ri-home-4-line"></i></a>
+          </li>
+          <li>
+            <a href="#data-pengantin" class="text-white text-3xl"
+              ><i class="ri-group-3-line"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#date-and-time" class="text-white text-3xl"
+              ><i class="ri-calendar-event-line"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#galery" class="text-white text-3xl"><i class="ri-image-line"></i></a>
+          </li>
+          <li>
+            <a href="#wedding-gift" class="text-white text-3xl"><i class="ri-gift-2-line"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- navigation menu -->
+
     <img
       src="./assets/img/Flower-Atas-Kiri.png"
       alt=""
@@ -83,17 +117,11 @@
       <p class="text-secondary font-semibold" data-aos="fade-up" data-aos-duration="1000">
         Jum'at<br />13 September 2024
       </p>
-      <div class="simply-countdown m-auto" data-aos="fade-up" data-aos-duration="1500"></div>
+      <div class="simply-countdown m-auto"></div>
     </section>
 
     <section class="firman mb-6">
-      <img
-        src="./assets/img/Waves Top.png"
-        alt=""
-        class="w-full mb-[-5px]"
-        data-aos="fade-up"
-        data-aos-duration="1500"
-      />
+      <img src="./assets/img/Waves Top.png" alt="" class="w-full mb-[-5px]" />
       <div class="bg-primary w-full">
         <p
           class="text-white text-center md:w-3/6 px-4 py-14 m-auto"
@@ -166,15 +194,11 @@
         src="./assets/img/Flower-Bawah-Kiri.png"
         alt=""
         class="absolute bottom-0 left-0 origin-bottom-left"
-        data-aos="fade-right"
-        data-aos-duration="1000"
       />
       <img
         src="./assets/img/Flower-Bawah-Kanan.png"
         alt=""
         class="absolute bottom-0 right-0 origin-bottom-right"
-        data-aos="fade-left"
-        data-aos-duration="1000"
       />
     </div>
 
@@ -183,19 +207,15 @@
         src="./assets/img/Flower-Bawah-Kiri-2.png"
         alt=""
         class="absolute top-0 left-0 origin-top-left"
-        data-aos="fade-right"
-        data-aos-duration="1000"
       />
       <img
         src="./assets/img/Flower-Bawah-Kanan-2.png"
         alt=""
         class="absolute top-0 right-0 origin-top-right"
-        data-aos="fade-left"
-        data-aos-duration="1000"
       />
     </div>
 
-    <section id="date-and-time" class="">
+    <section id="date-and-time" class="overflow-hidden">
       <p class="text-center px-4 py-14 m-auto" data-aos="fade-down" data-aos-duration="1000">
         Insya Allah Acara Akan <br />
         Dilaksanakan Pada:
@@ -241,6 +261,7 @@
         Di Kediaman Mempelai Wanita <br />Paringgonan, Kec. Ulu Barumun.
       </p>
     </section>
+
     <div class="map sm:w-full md:w-3/6 m-auto mt-10">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1994.5616221365037!2d99.6633945868652!3d1.0695067843059076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x302b8e4450013a53%3A0xe6726bb750205828!2sParinggonan%2C%20Ulu%20Barumun%2C%20Padang%20Lawas%20Regency%2C%20North%20Sumatra%2022763!5e0!3m2!1sen!2sid!4v1716798437384!5m2!1sen!2sid"
@@ -254,7 +275,7 @@
       ></iframe>
     </div>
 
-    <section id="galery" class="mt-[6rem]">
+    <section id="galery" class="mt-[6rem] overflow-hidden">
       <h1
         class="niconne-regular text-secondary text-5xl text-center mb-4"
         data-aos="fade-left"
@@ -349,7 +370,7 @@
       </div>
     </section>
 
-    <section id="wedding-gift" class="mt-[6rem]">
+    <section id="wedding-gift" class="mt-[6rem] overflow-hidden">
       <h1
         class="niconne-regular text-secondary text-5xl text-center mb-4"
         data-aos="fade-left"
@@ -401,19 +422,19 @@
           Anda Juga Bisa Mengirim Kado Fisik Ke Alamat: <br />
           Desa Paringgonan, Kec. Ulu Barumun, Kab. Padang Lawas, Sumatera Utara
         </p>
-        <a
-          href="https://wa.me/+6285275493938"
-          type="button"
-          class="bg-gradient-to-r from-primary to-accent px-8 py-4 text-white border-0 rounded-full font-semibold shadow-3xl shadow-primary"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-        >
-          Konfirmasi WA
-        </a>
+        <div class="pb-10" data-aos="fade-up" data-aos-duration="1000">
+          <a
+            href="https://wa.me/+6285275493938"
+            type="button"
+            class="bg-gradient-to-r from-primary to-accent px-8 py-4 text-white border-0 rounded-full font-semibold shadow-3xl shadow-primary"
+          >
+            Konfirmasi WA
+          </a>
+        </div>
       </div>
     </section>
 
-    <section id="turut-mengundang" class="mt-[6rem]">
+    <section id="turut-mengundang" class="mt-[6rem] overflow-hidden">
       <img src="./assets/img/Waves Top.png" alt="" class="w-full rotate-180" />
       <div class="w-full">
         <h3
@@ -490,6 +511,7 @@
     </section>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./assets/js/navbar.js"></script>
     <script>
       AOS.init();
 

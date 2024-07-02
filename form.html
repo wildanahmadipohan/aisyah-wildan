@@ -112,8 +112,8 @@
 
       const buatPesan = () => {
         let kotakPesan = document.getElementById('kotak-pesan');
-        const undangan = document.getElementById('undangan').value;
-        const pendamping = document.getElementById('pendamping').value;
+        const undangan = document.getElementById('undangan').value.replace(/\s/g, '%20');
+        const pendamping = document.getElementById('pendamping').value.replace(/\s/g, '%20');
 
         const pesan = `
         Assalamu'alaikum Wr. Wb

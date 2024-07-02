@@ -17,6 +17,9 @@
             boxShadow: {
               '3xl': '0 8px 20px 0 rgba(0, 0, 0, 0.3)',
             },
+            animation: {
+              'spin-slow': 'spin 3s linear infinite',
+            },
           },
         },
       };
@@ -510,6 +513,18 @@
       />
     </section>
 
+    <div class="audio-wrapper fixed bottom-[6rem] right-[2rem]">
+      <audio id="song" autoplay loop>
+        <source src="assets/audio/song.mp3" type="audio/mp3" />
+      </audio>
+
+      <div
+        class="audio-icon-wrapper text-3xl text-primary z-10 animate-spin-slow mix-blend-difference opacity-75"
+      >
+        <i class="ri-disc-line"></i>
+      </div>
+    </div>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./assets/js/navbar.js"></script>
     <script>
@@ -549,6 +564,31 @@
           alert('Nomor Dana telah disalin.');
         } catch (err) {
           console.error('Failed to copy: ', err);
+        }
+      };
+    </script>
+
+    <script>
+      let isPlaying = true;
+      const audioWrapper = document.querySelector('.audio-wrapper');
+      const song = document.querySelector('#song');
+      const songIcon = document.querySelector('.audio-icon-wrapper i');
+
+      window.addEventListener('documentContentLoaded', () => {
+        song.play();
+      });
+
+      audioWrapper.onclick = function () {
+        if (isPlaying) {
+          song.pause();
+          isPlaying = false;
+          songIcon.classList.remove('ri-disc-line');
+          songIcon.classList.add('ri-pause-circle-line');
+        } else {
+          song.play();
+          isPlaying = true;
+          songIcon.classList.add('ri-disc-line');
+          songIcon.classList.remove('ri-pause-circle-line');
         }
       };
     </script>
